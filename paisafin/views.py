@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
-from .models import Comments, Destination,All,Contactus, Silverbazar
+from .models import Comments, Destination,All,Contactus, Silverbazar,  Querries
 from .forms import AllForm, DestinationForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -16,7 +16,14 @@ def followers(request):
         follow.followers.add(request.user)
     return redirect("index")
 '''
-
+def querries(request):
+    if(request.method=="POST"):
+        tmp=Querries()
+        tmp.name=request.POST['name']
+        tmp.email=request.POST['email']
+        tmp.querry=request.POST['querry']
+        tmp.save()
+        return render(request,'landingpage.html')
 
 def comment(request):
     if(request.method=="POST"):
