@@ -31,4 +31,5 @@ urlpatterns=[
     path('silverbazar',views.silverbazar,name='silverbazar'),
     path('paisamoney/<str:pk>',views.paisamoney,name='paisamoney'),
     path('comment',views.comment,name='comment'),
+    path("querries",views.querries,name="querries"),
 ]
