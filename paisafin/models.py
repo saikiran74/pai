@@ -16,6 +16,11 @@ class Comments(models.Model):
     def __str__(self) -> str:
         return super().__str__()
 
+class Querries(models.Model):
+    name=models.CharField(max_length=100,default="None")
+    email=models.CharField(max_length=100,default="None")
+    querry=models.CharField(max_length=1000,default="None")
+    date=models.DateTimeField(auto_now_add=True)
 
 
 class Destination(models.Model):
