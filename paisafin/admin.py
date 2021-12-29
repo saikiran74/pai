@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Destination,Country,Comments,Comments,Type,Language,Contactus,Silverbazar,All
+from .models import Destination,Country,Comments,Comments,Type,Language,Contactus,Silverbazar,All, Querries
 
 # Register your models here.
 
